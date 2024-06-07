@@ -15,8 +15,8 @@
             </form>
         </div>
         <div class="col-md-3">
-            <a href="" class="btn btn-success"> Login </a>
-            <a href="" class="btn btn-primary"> Register </a>
+            <a href="login.jsp" class="btn btn-success"><i class="fa-solid fa-right-to-bracket"></i> Login </a>
+            <a href="register.jsp" class="btn btn-primary"><i class="fa-solid fa-user-plus"></i> Register </a>
         </div>
 
     </div>
