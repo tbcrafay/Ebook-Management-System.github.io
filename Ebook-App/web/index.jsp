@@ -5,6 +5,8 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+  <!-- <%@ page import="java.sql.Connection" %>  -->
+ <!-- <%@ page import="com.DB.DBConnect" %> -->
 <!DOCTYPE html>
 <html>
     <head>
@@ -31,6 +33,12 @@
         <div class="container-fluid back-img">
             <h2 class="text-center text-danger">E-book Management System</h2>
         </div>
+        
+        <!-- it shows if the connection is successful with index.jsp files or not
+        <%
+            Connection conn=DBConnect.getConn();
+            out.println(conn); 
+        %>    -->
 
         <!-- start Recent Books row -->
         <div class="container">
@@ -94,16 +102,16 @@
         </div> 
         <!-- End Recent Books row -->
 
-<!-- Start Upcoming Books row -->
-<!-- End Upcoming Books row -->
+        <!-- Start Upcoming Books row -->
+        <!-- End Upcoming Books row -->
 
-<!-- Start Old Books row -->
-<!-- End Old Books row -->
+        <!-- Start Old Books row -->
+        <!-- End Old Books row -->
 
-<!-- Footer-->
+        <!-- Footer-->
 
-<%@include file="all_components/footer.jsp" %>
-    
+        <%@include file="all_components/footer.jsp" %>
+
 
     </body>
 </html>
