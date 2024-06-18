@@ -5,6 +5,7 @@ an online ebook store, where you can manage, purchase and sell your ebook, with 
 1. JDK latest version
 2. Netbeans IDE
 3. Apache Tomcat server [how to install apache tomcat server on windows 10](https://www.youtube.com/watch?v=d8BAQ_zRmYY).
+4. MySQL Database. Look for that in Database.md file please!!!
 
 # About Servlet and JSP:
 1. [servlet and JSP in 10 mins..](https://www.youtube.com/watch?v=Nsh4dhSAE7I).
