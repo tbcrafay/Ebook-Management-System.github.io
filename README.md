@@ -19,4 +19,4 @@ an online ebook store, where you can manage, purchase and sell your ebook, with 
 2. [How to make servlet app on netbeans](https://www.youtube.com/results?search_query=how+to+create+a+servlet+in+netbeans+).
 
 # the playlist we will be following:
-[](https://www.youtube.com/playlist?list=PLQTYNpk8jwk33-kHcV0xdBy4L617EVnAt).
+[here's the playlist](https://www.youtube.com/playlist?list=PLQTYNpk8jwk33-kHcV0xdBy4L617EVnAt).
