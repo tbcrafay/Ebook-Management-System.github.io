@@ -5,7 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%--<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>--%> 
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
 <!DOCTYPE html>
 <html>
     <head>
@@ -25,18 +25,18 @@
                             <h4 class="text-center">Register Your ID</h4>
                             <p> <!-- just a gap in b/w! -->  </p>
                             
-<!--                            
+                            
                             <c:if test="${not empty sessionScope.succkMsg}">
                                 <div class="alert alert-danger" role="alert">
                                     ${sessionScope.succkMsg} 
                                 </div>
-                            </c:if> -->
+                            </c:if> 
 
-<!--                            <c:if test="${not empty sessionScope.uncheckMsg}">
+                            <c:if test="${not empty sessionScope.uncheckMsg}">
                                 <div class="alert alert-danger" role="alert">
                                     ${sessionScope.uncheckMsg}
                                 </div>
-                            </c:if>-->
+                            </c:if>
                             <form action="register" method="post"> <!-- it is method of connecting it to the reister.servlet -->
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Enter your name</label>
@@ -46,7 +46,7 @@
 
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Email address</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"required="required" name="email">
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required="required" name="email">
 
                                 </div>
 

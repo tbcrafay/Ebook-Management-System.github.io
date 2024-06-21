@@ -5,8 +5,8 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%--<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>--%>
-<%--<%@page isELIgnored= "false"%>--%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@page isELIgnored= "false"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -26,10 +26,10 @@
 
                             <h4 class="text-center">Login Here: </h4>
                             <p> <!-- just a gap in b/w! -->  </p>
-                            <!-- <c:if test="${not empty failedMsg}">
+                           <c:if test="${not empty failedMsg}">
                                  <h5 class="text-center text-danger">${failedMsg}</h5>
                                  <c:remove var="failedMsg" scope="session"/>
-                                 <c:if>  -->
+                                 </c:if>  
                             <p><!-- ^ for Redirecting Purposes--></p>
 
                             <form action="login" method="post">
