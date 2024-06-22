@@ -5,7 +5,8 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
+<%--<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@page isELIgnored= "false"%>--%> 
 <!DOCTYPE html>
 <html>
     <head>
@@ -26,7 +27,7 @@
                             <p> <!-- just a gap in b/w! -->  </p>
                             
                             
-                            <c:if test="${not empty sessionScope.succkMsg}">
+<!--                            <c:if test="${not empty sessionScope.succkMsg}">
                                 <div class="alert alert-danger" role="alert">
                                     ${sessionScope.succkMsg} 
                                 </div>
@@ -36,7 +37,8 @@
                                 <div class="alert alert-danger" role="alert">
                                     ${sessionScope.uncheckMsg}
                                 </div>
-                            </c:if>
+                            </c:if>-->
+                                    
                             <form action="register" method="post"> <!-- it is method of connecting it to the reister.servlet -->
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Enter your name</label>

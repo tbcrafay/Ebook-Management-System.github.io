@@ -5,6 +5,8 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%--<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>--%>
+<%--<%@page isELIgnored= "false"%>--%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -21,7 +23,17 @@
                     <div class="card " style="width:553px;">
                         <div class="card-body">
                             <h4 class="text-center"> Add Books</h4>
-                            <form action="../AdminAddBookServlet" method="post" enctype="multipart/form-data" style="width: 500px;">    
+                            <!-- <c:ig test="${not empty succMsg}">
+                            <p class="text-center text-success">${succMsg}</p>
+                            <c:remove var="succMsg" scope="session" />
+                            </c:if> 
+
+                            <c:ig test="${not empty succMsg}">
+                            <p class="text-center text-danger">${failedMsg}</p>
+                            <c:remove var="succMsg" scope="session" />
+                            </c:if> -->
+                            
+                            <form action="../add_book" method="post" enctype="multipart/form-data" style="width: 500px;">    
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Book Name</label>
                                     <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required="required" name="bname">
