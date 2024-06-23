@@ -72,7 +72,7 @@ public class BookAdd extends HttpServlet {
             Part part = request.getPart("bimg");
             String fileName = part.getSubmittedFileName();
 
-            BookDtls b = new BookDtls(bookName, author, price, categories, status, fileName, "admin");
+            BookDtls b = new BookDtls( bookName, author, price, categories, status, fileName, "admin");
             System.out.println(b);
 
             BookDAOImpl dao = new BookDAOImpl(DBConnect.getConn());
@@ -83,7 +83,7 @@ public class BookAdd extends HttpServlet {
 
             if (f) {
 
-                String path = getServletContext().getRealPath("") + "book";
+                String path = getServletContext().getRealPath("") + "books";
 
                 File file = new File(path);
 

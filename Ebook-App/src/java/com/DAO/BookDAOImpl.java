@@ -7,6 +7,9 @@ package com.DAO;
 import java.sql.Connection;
 import com.entity.BookDtls;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
 public class BookDAOImpl implements BookDAO {
 
@@ -41,5 +44,40 @@ public class BookDAOImpl implements BookDAO {
         }
 
         return f;
+    }
+
+    public List<BookDtls> getAllBooks() {
+
+        List<BookDtls> list = new ArrayList<BookDtls>();
+//        int counter = 1;
+//        BookDtls b = null;
+
+        try {
+            String sql = "select * from book_dtls";
+            PreparedStatement ps = conn.prepareStatement(sql);
+
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                BookDtls b = new BookDtls(rs.getString(2), rs.getString(3), rs.getString(4),
+                        rs.getString(5), rs.getString(6), rs.getString(7), rs.getString(8));
+//                b = new BookDtls();
+//                b.setBookId(rs.getInt(1));
+//                b.setBookName(rs.getString(2));
+//                b.setAuthor(rs.getString(3));
+//                b.setPrice(rs.getString(4));
+//                b.setBookCategory(rs.getString(5));
+//                b.setStatus(rs.getString(6));
+//                b.setPhoto(rs.getString(7));
+//                b.setEmail(rs.getString(8));
+                list.add(b);
+//                counter++;
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+
+        }
+
+        return list;
     }
 }
