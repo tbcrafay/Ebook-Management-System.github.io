@@ -19,10 +19,10 @@ public class BookDtls {
     private String photo;
     private String email;
 
-     public BookDtls(  String bookName, String author, String price, 
+     public BookDtls( int bookId, String bookName, String author, String price, 
                   String bookCategory, String status, String photo, String email) {
     super();
-//    this.bookId = bookId;
+    this.bookId = bookId;
     this.bookName = bookName;
     this.author = author;
     this.price = price;

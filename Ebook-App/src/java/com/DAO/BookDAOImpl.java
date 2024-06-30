@@ -23,7 +23,7 @@ public class BookDAOImpl implements BookDAO {
     public boolean addBooks(BookDtls b) {
         boolean f = false;
         try {
-            String sql = "insert into book_dtls(bookname,author,price,bookCategory,status,photo,user_email) values(?,?,?,?,?,?,?)";
+            String sql = "insert into book_dtls(bookname,author,price,bookCategory,status,photo,Email) values(?,?,?,?,?,?,?)";
             PreparedStatement ps = conn.prepareStatement(sql);
             ps.setString(1, b.getBookName());
             ps.setString(2, b.getAuthor());
@@ -58,8 +58,9 @@ public class BookDAOImpl implements BookDAO {
 
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                BookDtls b = new BookDtls(rs.getString(2), rs.getString(3), rs.getString(4),
+                BookDtls b = new BookDtls(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4),
                         rs.getString(5), rs.getString(6), rs.getString(7), rs.getString(8));
+
 //                b = new BookDtls();
 //                b.setBookId(rs.getInt(1));
 //                b.setBookName(rs.getString(2));
@@ -80,4 +81,23 @@ public class BookDAOImpl implements BookDAO {
 
         return list;
     }
+
+    public BookDtls getBookById(int id) {
+        BookDtls b = null;
+        try {
+            String sql = "select * from book_dtls where bookId=?";
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setInt(1, id);
+
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) { // Check if a record exists before creating BookDtls object
+                b = new BookDtls(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4),
+                        rs.getString(5), rs.getString(6), rs.getString(7), rs.getString(8));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return b;
+    }
+
 }

@@ -72,7 +72,7 @@ public class BookAdd extends HttpServlet {
             Part part = request.getPart("bimg");
             String fileName = part.getSubmittedFileName();
 
-            BookDtls b = new BookDtls( bookName, author, price, categories, status, fileName, "admin");
+            BookDtls b = new BookDtls(0, bookName, author, price, categories, status, fileName, "admin");
             System.out.println(b);
 
             BookDAOImpl dao = new BookDAOImpl(DBConnect.getConn());
