@@ -41,6 +41,7 @@
 				int id = Integer.parseInt(request.getParameter("id"));
 				BookDAOImpl dao = new BookDAOImpl(DBConnect.getConn());
 				BookDtls b = dao.getBookById(id);
+				request.setAttribute("bookDetails", b);
                             %>
                             <form action="../editbooks" method="post"  style="width: 500px;">   
 				<input type="hidden" name="id" value="<%=b.getBookId()%>">
